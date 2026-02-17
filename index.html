@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+    
+    <script>
+        (function() {
+            // Configuration: Set your target URLs here
+            const mobileUrl = "mobile.html";
+            const desktopUrl = "drivinggame.html";
+
+            // Simple check: Is it a touch device or a small screen?
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) 
+                             || (window.innerWidth <= 768);
+
+            // Execute redirect
+            if (isMobile) {
+                window.location.href = mobileUrl;
+            } else {
+                window.location.href = desktopUrl;
+            }
+        })();
+    </script>
+
+    <style>
+        /* Simple fallback styling in case of slow redirect */
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <p>Redirecting you to the best version of our site...</p>
+</body>
+</html>

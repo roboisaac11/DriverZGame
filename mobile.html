@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Walkthrough</title>
+    <style>
+        /* Modern reset and centering */
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #121212; /* Dark theme looks better for games */
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px; /* Limits size on larger tablets */
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #ff4757; /* A subtle 'error' or 'alert' red */
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 25px;
+            color: #ccc;
+        }
+
+        /* Responsive video wrapper (16:9 ratio) */
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            background: #000;
+        }
+
+        .video-wrapper iframe, 
+        .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .footer-note {
+            margin-top: 30px;
+            font-size: 0.8rem;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Mobile Play Unavailable</h1>
+        <p>Sorry, this game isn't available on mobile devices. But here's a video you can watch.</p>
+
+        <div class="video-wrapper">
+            <video 
+                controls 
+                playsinline 
+                poster="thumbnail.jpg">
+                <source src="walkthrough.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="footer-note">
+            Visit on a desktop browser to play the full game.
+        </div>
+    </div>
+
+</body>
+</html>
